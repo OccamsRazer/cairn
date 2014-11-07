@@ -44,7 +44,6 @@ Run:
 	gem install rails
 
 	rails -v
-
 Should recieve "Rails 4.1.6"
 -----------------------------------------------------------------------------------------
 Setting up Postgresql
@@ -59,6 +58,7 @@ Run:
 	sudo -u postgres createuser cairn -s
 
 Set the password:
+Run:
 	sudo -u postgres psql
 	postgres=# \password cairn
 	Enter new password: password
@@ -75,3 +75,4 @@ Run:
 	rake db:create
 	rake db:migrate
 	rails server
+-----------------------------------------------------------------------------------------
