@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  interest_profile_id: 
+  parent_topic_interest_id: 
+
+two:
+  name: MyString
+  interest_profile_id: 
+  parent_topic_interest_id: 
