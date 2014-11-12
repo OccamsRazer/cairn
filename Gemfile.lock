@@ -28,7 +28,13 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
     builder (3.2.2)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -36,10 +42,37 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
+    elasticsearch (1.0.6)
+      elasticsearch-api (= 1.0.6)
+      elasticsearch-transport (= 1.0.6)
+    elasticsearch-api (1.0.6)
+      multi_json
+    elasticsearch-model (0.1.6)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-persistence (0.1.6)
+      activemodel (> 3)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      elasticsearch-model (>= 0.1)
+      hashie
+      virtus
+    elasticsearch-rails (0.1.6)
+    elasticsearch-transport (1.0.6)
+      faraday
+      multi_json
+    equalizer (0.0.9)
     erubis (2.7.0)
     execjs (2.2.2)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    hashie (3.3.1)
     hike (1.2.3)
     i18n (0.6.11)
+    ice_nine (0.11.0)
     jbuilder (2.2.3)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -52,6 +85,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.4.2)
     multi_json (1.10.1)
+    multipart-post (2.0.0)
     pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -103,12 +137,20 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    virtus (1.0.3)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  elasticsearch-model
+  elasticsearch-persistence
+  elasticsearch-rails
   jbuilder (~> 2.0)
   jquery-rails
   pg
