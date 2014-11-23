@@ -8,4 +8,5 @@
 # updated_at	datetime
 
 class User < ActiveRecord::Base
+  has_many :interest_profiles
 end
