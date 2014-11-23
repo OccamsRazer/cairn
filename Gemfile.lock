@@ -83,9 +83,12 @@ GEM
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    mini_portile (0.6.1)
     minitest (5.4.2)
     multi_json (1.10.1)
     multipart-post (2.0.0)
+    nokogiri (1.6.4.1)
+      mini_portile (~> 0.6.0)
     pg (0.17.1)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -148,11 +151,13 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  elasticsearch
   elasticsearch-model
   elasticsearch-persistence
   elasticsearch-rails
   jbuilder (~> 2.0)
   jquery-rails
+  nokogiri
   pg
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
