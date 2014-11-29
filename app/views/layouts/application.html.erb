@@ -8,6 +8,10 @@
 </head>
 <body>
 
+<% if @user %>
+  <%= link_to "Logout", :logout  %>
+<% end -%>
+
 <%= yield %>
 
 </body>

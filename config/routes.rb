@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root 'login#index'
 
-  post 'login/login'
+  post 'login/login', as: :login
 
-  post 'login/logout'
+  get 'login/logout', as: :logout
 
   get 'search' => 'search#index', as: :search
 

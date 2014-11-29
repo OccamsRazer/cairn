@@ -1,2 +1,5 @@
-<h1>InterestProfile#index</h1>
-<p>Find me in app/views/interest_profile/index.html.erb</p>
+<h1>Interest Profiles</h1>
+
+<% @profiles.each do |profile| %>
+  <%= link_to profile %>
+<% end -%>

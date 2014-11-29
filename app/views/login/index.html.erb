@@ -1,2 +1,13 @@
-<h1>Login#index</h1>
-<p>Find me in app/views/login/index.html.erb</p>
+<h1>Welcome to Cairn</h1>
+
+<%= form_tag :action => :login do %>
+
+  <%= label_tag :email, 'Email: ' %><br>
+  <%= text_field_tag :email %><br>
+
+  <%= label_tag :password, 'Password: ' %><br>
+  <%= password_field_tag :password %><br>
+
+  <%= submit_tag 'Login' %>
+
+<% end %>

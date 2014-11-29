@@ -1,2 +1,6 @@
 <h1>Search#results</h1>
-<p>Find me in app/views/search/results.html.erb</p>
+
+<%= @results.each do |doc| %>
+  <%= link_to doc, doc.docno %>
+  <p><%= truncate(doc.text, 100) %></p>
+<% end -%>

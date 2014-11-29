@@ -1,2 +1,14 @@
-<h1>Search#index</h1>
-<p>Find me in app/views/search/index.html.erb</p>
+<h1>Search</h1>
+<h3>Text Search</h3>
+<%= form_tag("/search/text", method: "post") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<h3>Cairn Search</h3>
+<%= form_tag("/search/cairn", method: "post") do %>
+  <%= label_tag(:query, "Search for:") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Search") %>
+<% end %>
