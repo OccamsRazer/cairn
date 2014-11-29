@@ -1,5 +1,6 @@
 class DocumentController < ApplicationController
   before_filter :set_doc, :except => [:create, :index]
+  before_filter :ensure_login
 
   def show
   end
@@ -14,10 +15,11 @@ class DocumentController < ApplicationController
   end
 
   def rate_relevant
-    
+    @document.rate_relevant(@profile)
   end
 
-  def rate_irrelevant
+  def rate_nonrelevant
+    @document.rate_nonrelevant(@profile)
   end
 
   private

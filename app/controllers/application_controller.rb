@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
     @user ||= session[:user_id] && User.find(session[:user_id])
     @profile ||= session[:profile_id] && InterestProfile.find(session[:profile_id])
   end
+
+  def ensure_login
+    redirect_to :root_url unless @user
+  end
 end

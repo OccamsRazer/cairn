@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   get 'search' => 'search#index', as: :search
 
-  get 'search/cairn'
+  post 'search/cairn'
 
-  get 'search/text'
+  post 'search/text'
 
   get 'search/results'
 
