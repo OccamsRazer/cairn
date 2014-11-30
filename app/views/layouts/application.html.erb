@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cairn</title>
+  <title><%= @title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body <%= @body_attributes %> >
 
-<% if @user %>
-  <%= link_to "Logout", :logout  %>
-<% end -%>
+<%= link_to "Logout", :logout  if @user%>
 
 <%= yield %>
 

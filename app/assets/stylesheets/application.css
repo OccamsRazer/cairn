@@ -1,15 +1,349 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+#container {
+	background-color: #DFDFDF;
+	height: 1024px;
+	width: 1280px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* Title Bar */
+#titlebar {
+	background-color: #00326c;
+	height: 50px;
+	width: 1280px;
+}
+#toggle {
+	float: left;
+	height: 50px;
+	width: 40px;
+}
+#dropdowns {
+	float: right;
+	height: 50px;
+	width: 1240px;
+}
+#profilesdropdown {
+	float: left;
+	height: 35px;
+	width: 600px;
+	padding-left: 20px;
+	padding-top: 15px;
+}
+#similardropdown {
+	float: right;
+	height: 35px;
+	width: 600px;
+	padding-right: 20px;
+	padding-top: 15px;
+}
+#dropdown {
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+	width: 200px;
+ 	line-height: 25px;
+  	padding-right: 1px;
+ 	text-align: none;
+  	letter-spacing: 1px;
+}
+#profilesdropdown select {
+	width: 250px;
+}
+#similardropdown select {
+	width: 250px;
+}
+
+
+/* Search box */
+#search {
+	background-color: #005ecb;
+	height: 50px;
+	width: 1280px;
+	text-align: center;
+	vertical-align: middle;
+	padding-bottom: 10px;
+}
+.rounded { 
+	border-radius: 10px; 
+	width: 400px;
+	border: 1px solid;
+	box-shadow: 2px 2px 2px #fff;
+	margin-top: 12px;
+}
+input[type=button], input[type=button]:hover {
+	position:relative; 
+	left:6px;
+	border:1px solid #000;
+	border-radius: 5px;
+	color:#000;
+	cursor: pointer;
+}
+
+
+/* Results page and Profile page elements */
+#main {
+	background-color: #FFF;
+	float: left;
+	height: 865px;
+	width: 845px;
+	margin-top: 5px;
+	margin-left: 5px;
+	border-radius: 15px; 
+}
+#SimUsers {
+	background-color: #FFF;
+	float: right;
+	height: 279px;
+	width: 420px;
+	margin-top: 5px;
+	margin-right: 5px;
+	border-radius: 10px; 
+}
+#RecQs {
+	background-color: #FFF;
+	float: right;
+	height: 279px;
+	width: 420px;
+	margin-top: 10px;
+	margin-right: 5px;
+	border-radius: 10px; 
+}
+#ComRegs {
+	background-color: #FFF;
+	float: right;
+	height: 279px;
+	width: 420px;
+	margin-top: 10px;
+	margin-right: 5px;
+	border-radius: 10px; 
+}
+#column1 {
+	float: left;
+	height: 884px;
+	width: 425px;
+}
+#persinfo {
+	background-color: #FFF;
+	height: 415px;
+	width: 420px;
+	margin-top: 15px;
+	margin-left: 5px;
+	border-radius: 10px; 
+}
+#intprof {
+	background-color: #FFF;
+	height: 415px;
+	width: 420px;
+	margin-top: 25px;
+	margin-left: 5px; 
+	border-radius: 10px; 
+}
+#2columns {
+	float: right;
+	height: 884px;
+	width: 850px;
+}
+#column2 {
+	float: left;
+	height: 884px;
+	width: 420px;
+}
+#topint {
+	background-color: #FFF;
+	height: 415px;
+	width: 420px;
+	margin-top: 15px;
+	margin-left: 5px;
+	border-radius: 10px; 
+}
+#pastqs {
+	background-color: #FFF;
+	height: 415px;
+	width: 420px;
+	margin-top: 25px;
+	margin-left: 5px;
+	border-radius: 10px; 
+}
+#column3 {
+	float: right;
+	height: 884px;
+	width: 425px;
+}
+#regint {
+	background-color: #FFF;
+	height: 854px;
+	width: 420px;
+	margin-top: 15px;
+	margin-right: 5px;
+	border-radius: 10px; 
+}
+
+
+/* Search Filter options here */
+#SearchNav {
+	background-color: #005ecb;
+	height: 25px;
+	width: 1280px;
+}
+#SearchNav {
+   margin: 0;
+   padding: .3em 0 .3em 0;
+   background: #005ecb;
+   width: 100%;
+   text-align: center;
+}
+
+#SearchNav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   color: #000;
+   font-weight: bold;
+}
+
+#SearchNav ul li {
+   margin: 0;
+   padding: 0;
+   display: inline;
+}
+
+#SearchNav ul a:link{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #004415;
+}
+
+#SearchNav ul a:visited{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #000;
+}
+
+#SearchNav ul a:active{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #000;
+}
+
+#SearchNav ul a:hover{
+   margin: 0;
+   padding: .3em .4em .3em .4em;
+   text-decoration: none;
+   font-weight: bold;
+   font-size: medium;
+   color: #000;
+   background-color: #DFDFDF;
+}
+
+
+
+/* Log In Page CSS */
+body, .login-submit, .login-submit:before, .login-submit:after {
+  background: #003f89;
+}
+.login #body {
+  font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #6591d5;
+}
+a {
+  color: #00a1d2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.login {
+  position: relative;
+  margin: 80px auto;
+  width: 400px;
+  padding-right: 32px;
+  font-weight: bold;
+  color: #bbb;
+}
+.login p {
+  margin: 0 0 10px;
+}
+input, button, label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input[type=text], input[type=password] {
+  padding: 0 10px;
+  width: 300px;
+  height: 40px;
+  color: #fff;
+  text-shadow: 1px 1px 1px black;
+  background: rgba(0, 0, 0, 0.16);
+  border: 0;
+  border-radius: 5px;
+}
+input[type=text]:focus, input[type=password]:focus {
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  outline: 0;
+}
+label {
+  float: left;
+  width: 100px;
+  line-height: 40px;
+  padding-right: 10px;
+  font-weight: 100;
+  text-align: right;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.login-submit {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 32px;
+}
+.login-button {
+  position: relative;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  padding: 0 0 48px;
+  /* Fix wrong positioning in Firefox 9 & older (bug 450418) */
+  text-indent: 120%;
+  white-space: nowrap;
+  overflow: hidden;
+  background: none;
+  border: 0;
+  border-radius: 24px;
+  cursor: pointer;
+
+}
+.login-button:before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  left: 5px;
+  right: 5px;
+  background: #00a2d3;
+  border-radius: 24px;
+  background-image: -webkit-linear-gradient(top, #00a2d3, #0d7796);
+  background-image: -moz-linear-gradient(top, #00a2d3, #0d7796);
+  background-image: -o-linear-gradient(top, #00a2d3, #0d7796);
+  background-image: linear-gradient(to bottom, #00a2d3, #0d7796);
+}
+
+
+

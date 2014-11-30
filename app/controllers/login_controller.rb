@@ -1,5 +1,7 @@
 class LoginController < ApplicationController
   def index
+    @title = "Log In"
+    @body_attributes='class=login'
   end
 
   def login

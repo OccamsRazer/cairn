@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_user_and_profile
 
+  before_filter :set_defaults
+
   private
 
   def set_user_and_profile
@@ -14,5 +16,10 @@ class ApplicationController < ActionController::Base
 
   def ensure_login
     redirect_to :root unless @user
+  end
+
+  def set_defaults
+    @title = 'Cairn'
+    @body_attributes=""
   end
 end

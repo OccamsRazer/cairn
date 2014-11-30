@@ -1,13 +1,21 @@
-<h1>Welcome to Cairn</h1>
+<!-- Welcome Banner -->
+<div id="welcome"></div>
 
-<%= form_tag :action => :login do %>
+<!-- Login Box -->
+<div id="login">
+  <%= form_tag :action => :login do %>
+    <p>
+      <label for="email">Email:</label>
+      <input type="text" name="email" id="login">
+    </p>
 
-  <%= label_tag :email, 'Email: ' %><br>
-  <%= text_field_tag :email %><br>
+    <p>
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password">
+    </p>
 
-  <%= label_tag :password, 'Password: ' %><br>
-  <%= password_field_tag :password %><br>
-
-  <%= submit_tag 'Login' %>
-
-<% end %>
+    <p class="login-submit">
+      <button type="submit" class="login-button">Login</button>
+    </p>
+  <% end %>
+</div>
