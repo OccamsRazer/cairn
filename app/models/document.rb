@@ -24,5 +24,3 @@ class Document < ActiveRecord::Base
     rating.update_attribute(:rating, -1)
   end
 end
-
-Article.import
