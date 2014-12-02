@@ -18,7 +18,7 @@
   <!-- Profile/Search Toggle, Logo, and Interest Profile and Users dropdowns -->
   <div id="titlebar">
     <div id="toggle">
-      <%= link_to image_tag('toggle.jpg') ,:interest_profile %>
+      <%= link_to image_tag('toggle.jpg'), @profile %>
     </div>
     
     <div id="dropdowns">    
@@ -26,12 +26,7 @@
       <div id="profilesdropdown">
         
         <label id="dropdown">Interest Profile:</label>
-        <select name="Interest Profiles">
-          <option value="one">One</option>
-          <option value="two">Two</option>
-          <option value="three">Three</option>
-          <option value="four">Four</option>
-        </select> 
+        <%= collection_select(:interest_profiles, :current, @user.interest_profiles.order(:name), :id, :name) %>
         
       </div>
       
@@ -50,7 +45,7 @@
     </div>
 
     <div id="logout">
-      <%= link_to "Logout", :logout %>
+      <%= link_to image_tag('toggle.jpg') ,:logout %>
     </div>
     
   </div>

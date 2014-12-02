@@ -17,22 +17,27 @@
 	height: 50px;
 	width: 40px;
 }
+#logout {
+  float: right;
+  height: 50px;
+  width: 40px;
+}
 #dropdowns {
-	float: right;
+	float: left;
 	height: 50px;
-	width: 1240px;
+	width: 1200px;
 }
 #profilesdropdown {
 	float: left;
 	height: 35px;
-	width: 600px;
+	width: 580px;
 	padding-left: 20px;
 	padding-top: 15px;
 }
 #similardropdown {
 	float: right;
 	height: 35px;
-	width: 600px;
+	width: 580px;
 	padding-right: 20px;
 	padding-top: 15px;
 }

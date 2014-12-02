@@ -2,7 +2,7 @@ class InterestProfileController < ApplicationController
   before_filter :ensure_login
 
   def show
-    @profile = InterestProfile.find(params[:id])
+    @page_profile = InterestProfile.find(params[:id])
   end
 
   def index
