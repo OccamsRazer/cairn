@@ -1,8 +1,9 @@
 
 <!-- Main text area for search results and sidebars -->
 <div id="content">
-
-  <h1><%= @document.docno %></h1>
-  <p><%= @document.text %></p>
-
+  <div id="main-document">
+    <%= link_to '&laquo; Back to Results'.html_safe, :back %>
+    <h1><%= @document.docno %></h1>
+    <p><%= @document.text %></p>
+  </div>
 </div>

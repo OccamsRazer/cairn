@@ -52,10 +52,15 @@
   
   <!-- Search bar -->
   <div id="search">
-    <form>
+    <%= form_tag '/search/results', method: "get" do %>
+      <%= hidden_field_tag(:type, 'text') %>
+      <%= text_field_tag(:query, params[:query], :placeholder => 'Type Query Here', :class => "rounded", :required => true) %>
+      <%= submit_tag "Search" %>
+    <% end %>
+    <!-- <form>
       <input type="text" class="rounded" placeholder="Type Query Here" required >
       <input type="button" value="Search" >
-    </form>
+    </form> -->
   </div>
 
 

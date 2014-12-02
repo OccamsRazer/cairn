@@ -5,17 +5,18 @@ class SearchController < ApplicationController
   end
 
   def cairn
-    redirect_to :search and return if params[:query].blank?
-    @results = Search.cairn_search(@profile, params[:query])
-    redirect_to :search_results
   end
 
   def text
-    redirect_to :search and return if params[:query].blank?
-    @results = Search.text_search(@profile, params[:query])
-    redirect_to :search_results
   end
 
   def results
+    redirect_to :search and return if params[:query].blank?
+    skip_query_creation = params[:page].nil?
+    if params[:type] == 'cairn'
+      @results = Search.cairn_search(@profile, params[:query], params[:page], skip_query_creation)
+    else
+      @results = Search.text_search(@profile, params[:query], params[:page], skip_query_creation)
+    end
   end
 end

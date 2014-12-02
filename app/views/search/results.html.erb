@@ -3,7 +3,14 @@
 
   <!-- Main search results -->
   <div id="main">
-    <form action="" method="post" name="Search Results"></form>
+    <% @results.each do |doc| %>
+      <div class="result-item">
+        <%= link_to doc.docno, document_path(doc.id), :class => 'document-link' %>
+        <div class="document-text"><%= truncate(doc.text, length: 150, separator: ' ') %></div>
+      </div>
+    <% end %>
+
+    <%= will_paginate @results %>
   </div>
 
   <!-- Similar Users sidebar -->

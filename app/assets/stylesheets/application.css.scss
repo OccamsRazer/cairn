@@ -67,6 +67,7 @@
 	text-align: center;
 	vertical-align: middle;
 	padding-bottom: 10px;
+
 }
 .rounded { 
 	border-radius: 10px; 
@@ -75,7 +76,7 @@
 	box-shadow: 2px 2px 2px #fff;
 	margin-top: 12px;
 }
-input[type=button], input[type=button]:hover {
+input[type=button], input[type=button]:hover, input[type=submit], input[type=submit]:hover {
 	position:relative; 
 	left:6px;
 	border:1px solid #000;
@@ -89,12 +90,35 @@ input[type=button], input[type=button]:hover {
 #main {
 	background-color: #FFF;
 	float: left;
-	height: 865px;
-	width: 845px;
+	height: 805px;
+	width: 785px;
 	margin-top: 5px;
 	margin-left: 5px;
-	border-radius: 15px; 
+	border-radius: 15px;
+  padding: 30px 30px;
+  position: relative;
+
+  .result-item {
+    margin-bottom: 20px;
+
+  }
+  .pagination {
+    position:absolute; bottom:30px;
+  }
 }
+
+#main-document {
+  background-color: #FFF;
+  float: left;
+  height: 805px;
+  width: 1210px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 15px;
+  padding: 30px 30px;
+  position: relative;
+}
+
 #SimUsers {
 	background-color: #FFF;
 	float: right;

@@ -3,13 +3,27 @@
 
   <!-- Personal Information -->
   <div id="persinfo">
-    <form action="" method="get" name="Personal Info"></form>
+    <div>Personal Info</div>
+    <table>
+      <tr><td>Name:</td><td><%=@user.name%></td></tr>
+      <tr><td>Email:</td><td><%=@user.name%></td></tr>
+      <tr><td>Organization:</td>
+        <% @profile.profile_organizations.each do |org| %>
+          <td>org.organization.name</td></tr><tr>
+        <% end %>
+      </tr>
+    </table>
   </div>
 
 
   <!-- Interest Profile -->
   <div id="intprof">
-    <form action="" method="get" name="Interest Profile"></form>
+    <div>Personal Info</div>
+    <table>
+      <% @user.interest_profiles.order(:name).each do |prof| %>
+        <tr><td><%= prof.name %></td></tr>
+      <% end %>
+    </table>
   </div>
 
 </div>
@@ -22,12 +36,22 @@
 
     <!-- Topics of Interest -->
     <div id="topint">
-      <form action="" method="get" name="Topics of Interest"></form>
+      <div>Topics of Interest</div>
+      <table>
+        <% @profile.profile_topics.each do |top| %>
+          <tr><td><%= top.topic_interest.name %></td></tr>
+        <% end %>
+      </table>
     </div>
 
     <!-- Past Queries -->
     <div id="pastqs">
-      <form action="" method="get" name="Past Queries"></form>
+      <div>Past Queries</div>
+      <table>
+        <% @profile.queries.each do |q| %>
+          <tr><td><%= q.query %></td></tr>
+        <% end %>
+      </table>
     </div>
 
   </div>
@@ -37,7 +61,12 @@
 
     <!-- Regions of Interest -->
     <div id="regint">
-      <form action="" method="get" name="Regions of Interest"></form>
+      <div>Regions of Interest</div>
+      <table>
+        <% @profile.profile_locations.each do |loc| %>
+          <tr><td><%= loc.location_interest.name %></td></tr>
+        <% end %>
+      </table>
     </div>
 
   </div>

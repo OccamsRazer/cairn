@@ -1,35 +1,50 @@
 Rails.application.routes.draw do
   root 'login#index'
 
-  get 'dataset/load'
+  resources :document
+
+  resources :interest_profile
+
+  # resources :login
+
+  get 'login' => 'login#index'
+
+  post 'login' => 'login#create'
   
-  post 'login/login', as: :login
+  get 'logout' => 'login#logout'
 
-  get 'login/logout', as: :logout
 
-  get 'search' => 'search#index', as: :search
+  get 'search/results' => 'search#results'
+  resources :search
 
-  post 'search/cairn'
+  # get 'dataset/load'
+  
+  # post 'login/login', as: :login
 
-  post 'search/text'
 
-  get 'search/results'
+  # get 'search' => 'search#index', as: :search
 
-  get 'interest_profile/:id' => 'interest_profile#show'
+  # get 'search/cairn'
 
-  get 'interest_profile' => 'interest_profile#index'
+  # get 'search/text'
 
-  post 'interest_profile/:id/edit' => 'interest_profile#edit'
+  # get 'search/results'
 
-  post 'interest_profile/create' => 'interest_profile#create'
+  # get 'interest_profile/:id' => 'interest_profile#show'
 
-  get 'document/:id' => 'document#show'
+  # get 'interest_profile' => 'interest_profile#index'
 
-  get 'document' => 'document#index'
+  # post 'interest_profile/:id/edit' => 'interest_profile#edit'
 
-  post 'document/:id/edit' => 'document#edit', as: :edit
+  # post 'interest_profile/create' => 'interest_profile#create'
 
-  post 'document/create' => 'document#create'
+  # get 'document/:id' => 'document#show'
+
+  # get 'document' => 'document#index'
+
+  # post 'document/:id/edit' => 'document#edit', as: :edit
+
+  # post 'document/create' => 'document#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
