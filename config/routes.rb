@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'login#index'
 
+  get 'dataset/load'
+  
   post 'login/login', as: :login
 
   get 'login/logout', as: :logout
