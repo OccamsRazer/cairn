@@ -1,6 +1,25 @@
-<h1>Search#results</h1>
+<!-- Main text area for search results and sidebars -->
+<div id="content">
 
-<%= @results.each do |doc| %>
-  <%= link_to doc, doc.docno %>
-  <p><%= truncate(doc.text, 100) %></p>
-<% end -%>
+  <!-- Main search results -->
+  <div id="main">
+    <form action="" method="post" name="Search Results"></form>
+  </div>
+
+  <!-- Similar Users sidebar -->
+  <div id="SimUsers">
+    <form action="" method="get" name="Similar Users"></form>
+  </div>
+
+  <!-- Recommended Queries sidebar -->
+  <div id="RecQs">
+    <form action="" method="get" name="Recommended Queries"></form>
+  </div>
+
+  <!-- Common Regions sidebar -->
+  <div id="ComRegs">
+    <form action="" method="get" name="Common Regions"></form>
+  </div>
+
+
+</div>

@@ -1,105 +1,44 @@
-<!-- page contents -->
-<div id="container">
+<!-- left column -->
+<div id="column1">
 
-  <!-- Profile/Search Toggle, Logo, and Interest Profile and Users dropdowns -->
-  <div id="titlebar">
-    <div id="toggle">
-      <%= link_to image_tag('toggle.jpg') ,:interest_profile %>
-    </div>
-    
-    <div id="dropdowns">    
-      
-      <div id="profilesdropdown">
-        
-        <label id="dropdown">Interest Profile:</label>
-        <select name="Interest Profiles">
-          <option value="one">One</option>
-          <option value="two">Two</option>
-          <option value="three">Three</option>
-          <option value="four">Four</option>
-        </select> 
-        
-      </div>
-      
-      <div id="similardropdown">
-        
-        <label id="dropdown">User Similarity to Me:</label>
-        <select name="User Similarity">
-          <option value="one">One</option>
-          <option value="two">Two</option>
-          <option value="three">Three</option>
-          <option value="four">Four</option>
-        </select>
-        
-      </div> 
-      
-    </div>
-    
-  </div>
-  
-  <!-- Search bar -->
-  <div id="search">
-    <form>
-      <input type="text" class="rounded" placeholder="Type Query Here" required >
-      <input type="button" value="Search" >
-    </form>
+  <!-- Personal Information -->
+  <div id="persinfo">
+    <form action="" method="get" name="Personal Info"></form>
   </div>
 
 
-  <!-- Search results 'nav' bar -->
-  <div id="SearchNav">
-    <ul>
-      <li>Showing:</li>
-      <li><a href="">All</a></li>
-      <li><a href="">Results</a></li>
-      <li><a href="">Similar Users</a></li>
-      <li><a href="">Recommended Queries</a></li>
-      <li><a href="">Recommended Results</a></li>
-      <li><a href="">Common Topics</a></li>
-    </ul> 
+  <!-- Interest Profile -->
+  <div id="intprof">
+    <form action="" method="get" name="Interest Profile"></form>
   </div>
-  <!-- left column -->
-  <div id="column1">
-    
-    <!-- Personal Information -->
-    <div id="persinfo">
-      <form action="" method="get" name="Personal Info"></form>
-    </div>
-    
-    
-    <!-- Interest Profile -->
-    <div id="intprof">
-      <form action="" method="get" name="Interest Profile"></form>
-    </div>
-    
-  </div>
-  
-  <!-- two right columns -->
-  <div id="2columns">
-    
-    <!-- middle column -->
-    <div id="column2">
-      
-      <!-- Topics of Interest -->
-      <div id="topint">
-        <form action="" method="get" name="Topics of Interest"></form>
-      </div>
-      
-      <!-- Past Queries -->
-      <div id="pastqs">
-        <form action="" method="get" name="Past Queries"></form>
-      </div>
-      
-    </div>
-    
-    <!-- right column -->
-    <div id="column3">
-      
-      <!-- Regions of Interest -->
-      <div id="regint">
-        <form action="" method="get" name="Regions of Interest"></form>
-      </div>
-      
-    </div>
-  </div>   
+
 </div>
+
+<!-- two right columns -->
+<div id="2columns">
+
+  <!-- middle column -->
+  <div id="column2">
+
+    <!-- Topics of Interest -->
+    <div id="topint">
+      <form action="" method="get" name="Topics of Interest"></form>
+    </div>
+
+    <!-- Past Queries -->
+    <div id="pastqs">
+      <form action="" method="get" name="Past Queries"></form>
+    </div>
+
+  </div>
+
+  <!-- right column -->
+  <div id="column3">
+
+    <!-- Regions of Interest -->
+    <div id="regint">
+      <form action="" method="get" name="Regions of Interest"></form>
+    </div>
+
+  </div>
+</div>   
