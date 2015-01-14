@@ -15,21 +15,15 @@ class InterestProfile < ActiveRecord::Base
   has_many :document_rating
 
   def build_interest_vector
-    org_vector = [0] * Organization.count
-    topic_vector = [0] * TopicInterest.count
-    loc_vector = [0] * LocationInterest.count
-
-    profile_organizations.each do |x|
-      org_vector[ x.organization_id - 1 ] = 1
-    end
-    profile_topics.each do |x|
-      topic_vector[ x.topic_interest_id - 1 ] = 1
-    end
-    profile_locations.each do |x|
-      loc_vector[ x.location_interest_id - 1 ] = 1
-    end
+    org_vector = profile_organizations.map{|x| "#{x.class}##{x.id}" }
+    topic_vector = profile_topics.map{|x| "#{x.class}##{x.id}" }
+    loc_vector = profile_locations.map{|x| "#{x.class}##{x.id}" }
 
     org_vector + topic_vector + loc_vector
+  end
+
+  def similarity_score(other_profile)
+    Jaccard.coefficient(self.build_interest_vector, other_profile.build_interest_vector)
   end
 
   def self.vector_size
