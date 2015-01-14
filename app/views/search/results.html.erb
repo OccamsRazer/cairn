@@ -3,6 +3,10 @@
 
   <!-- Main search results -->
   <div id="main">
+    <% if @results.size == 0 %>
+      No results for "<%= params[:query]%>"
+    <% end %>
+
     <% @results.each do |doc| %>
       <div class="result-item">
         <%= link_to doc.docno, document_path(doc.id), :class => 'document-link' %>
