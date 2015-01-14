@@ -15,11 +15,13 @@ class InterestProfile < ActiveRecord::Base
   has_many :document_rating
 
   def build_interest_vector
-    org_vector = profile_organizations.map{|x| "#{x.class}##{x.id}" }
-    topic_vector = profile_topics.map{|x| "#{x.class}##{x.id}" }
-    loc_vector = profile_locations.map{|x| "#{x.class}##{x.id}" }
+    Rails.cache.fetch("profile/#{self.id}") do
+      org_vector = profile_organizations.map{|x| "#{x.class}##{x.id}" }
+      topic_vector = profile_topics.map{|x| "#{x.class}##{x.id}" }
+      loc_vector = profile_locations.map{|x| "#{x.class}##{x.id}" }
 
-    org_vector + topic_vector + loc_vector
+      org_vector + topic_vector + loc_vector
+    end
   end
 
   def similarity_score(other_profile)
