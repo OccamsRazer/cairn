@@ -77,7 +77,7 @@ rails server
 ---
 Note
 --
-If you'd like to fill the database with some data run
+Run the following if you'd like to fill the database with some sample data
 ```
 rake db:seed
 ./script/import_tipster.rb <path to tipster formatted file>
