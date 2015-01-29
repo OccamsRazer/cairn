@@ -72,10 +72,15 @@ cd cairn
 bundle
 rake db:create
 rake db:migrate
-rake db:seed
 rails server
 ```
 ---
 Note
----
+--
+If you'd like to fill the database with some data run
+```
+rake db:seed
+./script/import_tipster.rb <path to tipster formatted file>
+```
+
 db/seeds.rb illustrates how to create various information within the app
