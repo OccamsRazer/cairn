@@ -72,5 +72,10 @@ cd cairn
 bundle
 rake db:create
 rake db:migrate
+rake db:seed
 rails server
 ```
+---
+Note
+---
+db/seeds.rb illustrates how to create various information within the app
