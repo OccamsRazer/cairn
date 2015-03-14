@@ -2,7 +2,7 @@
 
 #Parse a file and store it in a variable
 
-exit if ARGV.blank?
+exit if ARGV.empty?
 
 ARGV.each do |filepath|
   file = open(filepath)
