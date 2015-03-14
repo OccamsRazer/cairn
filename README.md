@@ -64,6 +64,16 @@ Enter it again: password
 postgres=# \q
 ```
 ---
+Installing/Running Elasticsearch
+--
+Note: This must be done before documents are created. If you already have documents in the database,
+open a rails console and run 'Document.import'
+
+1. Download elasticsearch from https://www.elastic.co/downloads/elasticsearch
+2. Extract the file to a directory of your choice
+3. Run 'elasticsearch' found in the bin directory
+
+---
 Final Steps
 --
 ```
